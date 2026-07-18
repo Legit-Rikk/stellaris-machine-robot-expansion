@@ -27,7 +27,6 @@ xvcv_mdlc_pc_machine_ser_district_unity = {
 
 	conversion_ratio = 1
 	inline_script = planet/districts/convert_to/oxr_wm_district_2
-
 	planet_modifier = { rikk_mdlc_planet_cooling_modifier = -1 }
 
 	resources = {
@@ -103,8 +102,7 @@ xvcv_mdlc_pc_machine_ser_district_logistics = {
 
 	conversion_ratio = 1
 	inline_script = planet/districts/convert_to/oxr_wm_district_3
-
-	planet_modifier = { rikk_mdlc_planet_cooling_modifier = -1 }
+	inline_script = planet/districts/auto/oxr_wm_cooling_subdistricts
 
 	zone_slots = {
 		oxr_mdlc_origin_wm_slot_ser_trade
@@ -190,8 +188,7 @@ xvcv_mdlc_pc_machine_ser_district_crime = {
 
 	conversion_ratio = 1
 	inline_script = planet/districts/convert_to/oxr_wm_district_4
-
-	planet_modifier = { rikk_mdlc_planet_cooling_modifier = -1 }
+	inline_script = planet/districts/auto/oxr_wm_cooling_subdistricts
 	
 	zone_slots = {
 		oxr_mdlc_slot_pc_machine_ser_anticrime
