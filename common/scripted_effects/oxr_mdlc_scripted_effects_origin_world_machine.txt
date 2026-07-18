@@ -2029,10 +2029,6 @@ oxr_mdlc_planet_create_t3_world_colony = {
 			oxr_mdlc_origin_world_machine_create_digsite_for_blocker = yes
 		}
 
-		set_variable = {
-			which = num_xvcv_mdlc_cooling_districts
-			value = 0
-		}
 		add_modifier = { modifier = "planet_population_control_gestalt" days = -1 }
 		# add_modifier = { modifier = xvcv_mdlc_world_machines_districts_heat_indicator_neutral days = -1 }
 		xvcv_mdlc_planet_owner_terraforming_resolution_breached_effect = yes
