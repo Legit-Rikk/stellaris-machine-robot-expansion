@@ -61,7 +61,7 @@ rikk_mdlc_planet_cooling_multiplier_value = {
 	
 	# This modifier is to limit any positive effects of building a ton of excess cooling districts
 	modifier = { 
-		pow = 0.25 #This is the equivalent of sqrt twice
+		pow = 0.25 #This is the equivalent of cube root
 		planet = { check_modifier_value = { modifier = rikk_mdlc_planet_cooling_modifier value > 0 } }
 	}
 	
