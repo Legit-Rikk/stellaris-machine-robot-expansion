@@ -61,8 +61,12 @@ rikk_mdlc_planet_cooling_multiplier_value = {
 	
 	# This modifier is to limit any positive effects of building a ton of excess cooling districts
 	modifier = { 
+		planet = { check_modifier_value = { modifier = rikk_mdlc_planet_cooling_modifier value < 0 } }
 		pow = 0.25 #This is the equivalent of fourth root
+	}
+	modifier = {
 		planet = { check_modifier_value = { modifier = rikk_mdlc_planet_cooling_modifier value > 0 } }
+		mult = -1
 	}
 	
 	# max 25% modifier but there is no bottom to prevent people from ignoring cooling
@@ -73,17 +77,18 @@ rikk_mdlc_planet_cooling_multiplier_value = {
 	round = yes
 	divide = 10
 }
-rikk_mdlc_planet_cooling_multiplier_display_value = {
-	add = value:rikk_mdlc_planet_cooling_multiplier_value
-	mult = 10
-}
-rikk_mdlc_planet_cooling_multiplier_display_value_negative = {
-	add = value:rikk_mdlc_planet_cooling_multiplier_value
-	mult = -10
-}
-rikk_mdlc_planet_cooling_display_value = {
+
+rikk_mdlc_planet_cooling_display_value = { #this display is for the total value
 	add = planet.modifier:rikk_mdlc_planet_cooling_modifier
 	round = yes
+}
+rikk_mdlc_planet_cooling_multiplier_display_value = { #this display is for the production value
+	add = value:rikk_mdlc_planet_cooling_multiplier_value
+	mult = 10 #get rid of decimal
+}
+rikk_mdlc_planet_cooling_multiplier_display_value_negative = { #this display is for the upkeep value
+	add = value:rikk_mdlc_planet_cooling_multiplier_value
+	mult = -10 #get rid of decimal and invert it
 }
 
 # This value exists because for some reason 'mult = planet.modifier:rikk_mdlc_world_machine_cooling_district_effectiveness' breaks the triggered_planet_modifier on cooling districts

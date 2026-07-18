@@ -29,7 +29,7 @@ triggered_planet_modifier = {
 	rikk_mdlc_planet_cooling_modifier = 1
 	mult = planet.value:rikk_mdlc_world_machine_cooling_district_effectiveness_value
 }
-triggered_planet_modifier = { rikk_mdlc_planet_cooling_modifier = 3 }
+triggered_planet_modifier = { rikk_mdlc_planet_cooling_modifier = -3 }
 
 triggered_planet_modifier = {
 	potential = {

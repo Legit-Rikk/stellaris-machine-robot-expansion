@@ -23,7 +23,7 @@
 
 rikk_mdlc_planet_cooling_modifier = {
 	icon = mod_rikk_mdlc_world_machine_cooling_district_effectiveness
-	good = yes
+	#good = yes
 	category = planet
 }
 
