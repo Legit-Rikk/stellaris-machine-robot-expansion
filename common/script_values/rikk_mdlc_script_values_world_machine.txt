@@ -62,7 +62,7 @@ rikk_mdlc_planet_cooling_multiplier_value = {
 	# This modifier is to limit any positive effects of building a ton of excess cooling districts
 	modifier = { 
 		planet = { check_modifier_value = { modifier = rikk_mdlc_planet_cooling_modifier value < 0 } }
-		pow = 0.25 #This is the equivalent of fourth root
+		pow = 0.275 # this is the equivalent of square root
 	}
 	modifier = {
 		planet = { check_modifier_value = { modifier = rikk_mdlc_planet_cooling_modifier value > 0 } }
@@ -81,6 +81,10 @@ rikk_mdlc_planet_cooling_multiplier_value = {
 rikk_mdlc_planet_cooling_display_value = { #this display is for the total value
 	add = planet.modifier:rikk_mdlc_planet_cooling_modifier
 	round = yes
+	modifier = { 
+		planet = { check_modifier_value = { modifier = rikk_mdlc_planet_cooling_modifier value = -27 } }
+		subtract = 0.315 # easter egg
+	}
 }
 rikk_mdlc_planet_cooling_multiplier_display_value = { #this display is for the production value
 	add = value:rikk_mdlc_planet_cooling_multiplier_value
