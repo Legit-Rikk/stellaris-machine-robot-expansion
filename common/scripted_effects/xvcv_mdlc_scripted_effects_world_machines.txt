@@ -206,7 +206,7 @@ xvcv_mdlc_planet_decision_convert_to_world_machine = {
 	}
 	if = {
 		limit = { oxr_mdlc_planet_is_t3_world_machine = yes }
-		planet = { planet_event = { id = xvcv_mdlc.75 days = 1 } }
+		planet = { planet_event = { id = xvcv_mdlc.75 } }
 	}
 }
 

@@ -238,7 +238,7 @@ planet_event = {
 	}
 
 	immediate = {
-		planet_event = { id = xvcv_mdlc.75 days = 1 }
+		planet_event = { id = xvcv_mdlc.75 }
 	}
 }
 
@@ -250,7 +250,7 @@ planet_event = {
 
 	immediate = {
 		add_deposit = rikk_mdlc_d_world_machine_outer_core_cooled
-		planet_event = { id = xvcv_mdlc.75 days = 1 }
+		planet_event = { id = xvcv_mdlc.75 }
 	}
 }
 

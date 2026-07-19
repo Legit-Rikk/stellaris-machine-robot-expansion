@@ -2278,7 +2278,7 @@ planet_event = {
 		log = "A district was built on \\[This.GetName]."
 		# Any time a T3-world district is built, cooling must be recalculated,
 		# as well as deposits must be re-checked to create offsets in case cooling is unbalanced
-		planet_event = { id = xvcv_mdlc.75 days = 1 }
+		planet_event = { id = xvcv_mdlc.75 }
 	}
 }
 
@@ -2293,7 +2293,7 @@ planet_event = {
 	}
 	immediate = {
 		log = "A district was removed from \\[This.GetName]."
-		planet_event = { id = xvcv_mdlc.75 days = 1 }
+		planet_event = { id = xvcv_mdlc.75 }
 	}
 }
 # xvcv_on_world_machine_t3_resource_district_demolished, or cooling district demolished
@@ -2307,7 +2307,7 @@ planet_event = {
 	}
 	immediate = {
 		log = "A T3 resource district was removed from \\[This.GetName]."
-		planet_event = { id = xvcv_mdlc.75 days = 1 }
+		planet_event = { id = xvcv_mdlc.75 }
 	}
 }
 
@@ -2325,19 +2325,35 @@ country_event = {
 	immediate = {
 		every_owned_colony = {
 			limit = { oxr_mdlc_planet_is_t3_world_machine = yes }
-			planet_event = { id = xvcv_mdlc.75 days = 1 }
+			planet_event = { id = xvcv_mdlc.75 }
 		}
 	}
 }
 
-
-# to be called 1 day after to let stellaris process the modifier change
+# Called immediately to add the calculating modifier
 planet_event = {
 	id = xvcv_mdlc.75
 	hide_window = yes
 	is_triggered_only = yes
 
+	trigger = { oxr_mdlc_planet_is_t3_world_machine = yes }
+	
 	immediate = {
+		remove_modifier = xvcv_mdlc_world_machines_districts_heat_indicator_good
+		remove_modifier = xvcv_mdlc_world_machines_districts_heat_indicator_neutral
+		remove_modifier = xvcv_mdlc_world_machines_districts_heat_indicator_bad
+		add_modifier = { modifier = xvcv_mdlc_world_machines_districts_heat_indicator_calculating days = 1 }
+		planet_event = { id = xvcv_mdlc.76 days = 1 }
+	}
+}
+# Called 1 day after to let stellaris process the modifier change
+planet_event = {
+	id = xvcv_mdlc.76
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		remove_modifier = xvcv_mdlc_world_machines_districts_heat_indicator_calculating
 		xvcv_mdlc_planet_wm_calc_output_value = yes
 	}
 }

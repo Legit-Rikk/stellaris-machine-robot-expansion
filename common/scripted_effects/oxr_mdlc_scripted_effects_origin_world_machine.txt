@@ -1521,7 +1521,7 @@ oxr_mdlc_planet_create_world_machine_colony = {
 				is_planet_class = xvcv_mdlc_pc_machine_ecu
 			}
 		}
-		planet = { planet_event = { id = xvcv_mdlc.75 days = 1 } }
+		planet = { planet_event = { id = xvcv_mdlc.75 } }
 	}
 
 	# Clean up flags
@@ -2059,7 +2059,7 @@ oxr_mdlc_planet_create_t3_world_colony = {
 			log = "Created one extra Automation species"
 		}
 		oxr_mdlc_origin_world_machine_calc_max_district_armies = yes
-		planet = { planet_event = { id = xvcv_mdlc.75 days = 1 } }
+		planet = { planet_event = { id = xvcv_mdlc.75 } }
 	}
 
 	owner = {
