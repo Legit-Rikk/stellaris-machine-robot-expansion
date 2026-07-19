@@ -228,7 +228,7 @@ xvcv_mdlc_pc_machine_ser_district_crime = {
 	}
 
 	resources = {
-		category = xvcv_mdlc_world_machines_computer_districts
+		category = xvcv_mdlc_world_machines_cybersecurity_districts
 		cost = {
 			minerals = @xvcv_mdlc_district_cost_5
 			volatile_motes = 100
