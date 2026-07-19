@@ -27,7 +27,7 @@ xvcv_mdlc_pc_machine_ser_district_unity = {
 
 	conversion_ratio = 1
 	inline_script = planet/districts/convert_to/oxr_wm_district_2
-	planet_modifier = { rikk_mdlc_planet_cooling_modifier = -1 }
+	inline_script = planet/districts/auto/oxr_wm_cooling_subdistricts
 
 	resources = {
 		category = xvcv_mdlc_world_machines_unity_districts
