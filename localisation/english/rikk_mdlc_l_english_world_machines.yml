@@ -190,7 +190,7 @@
  rikk_mdlc_d_world_machine_outer_core_cooled_desc: "Sixty-four cooling stations are installed at the planet's outer core. These heavily shielded pockets provide excellent environments for novel research. Their strategic location permits communications from the surface to find the shortest route over the greatest distances."
  
  rikk_mdlc_world_machine_outer_core_cooling_mod: "Outer Core Cooling"
- rikk_mdlc_world_machine_outer_core_cooling_mod: "Cooling stations are being installed in the planet's outer core, slightly disrupting existing cooling districts."
+ rikk_mdlc_world_machine_outer_core_cooling_mod_desc: "Cooling stations are being installed in the planet's outer core, slightly disrupting existing cooling districts."
  
  #inner core roots
  rikk_mdlc_decision_world_machine_inner_core_roots: "§c§!Geo-Expansion 4: Inner Core Roots"
