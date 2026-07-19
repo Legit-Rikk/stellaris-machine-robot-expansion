@@ -123,10 +123,15 @@ rikk_mdlc_district_efficiency_value = { # for localization
 	round = yes
 }
 
+rikk_mdlc_cooling_multiplier_add = {
+	add = value:rikk_mdlc_planet_cooling_multiplier_value
+	divide = 10
+	add = 1
+}
 rikk_mdlc_combined_special_multiplier = {
 	base = 1
 	add = planet.modifier:rikk_mdlc_world_machine_districts_efficiency
-	mult = planet.oxr_mdlc_world_machines_districts_output_var
+	mult = value:rikk_mdlc_cooling_multiplier_add
 }
 
 rikk_mdlc_world_machine_orbital_shipyards_value = {
